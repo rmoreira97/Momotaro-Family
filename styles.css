@@ -1,0 +1,156 @@
+/* styles.css */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+  }
+  
+  .header-bg {
+    background-image: url("https://i.ytimg.com/vi/KzJ3ymaYYKs/maxresdefault.jpg"); /* Replace with the path to your image */
+    background-size: cover; /* Adjust to cover the entire header */
+    background-position: center; /* Position the image at the center */
+    height: 300px; /* Adjust the height of the header */
+    text-align: center; /* Center-align the text within the header */
+  }
+  
+  .header-content {
+    background-color: rgba(0, 0, 0, 0.5); /* Add a semi-transparent overlay */
+    padding: 1rem;
+  }
+  
+  .header-content h1 {
+    color: white;
+    font-size: 2rem;
+    margin: 0;
+  }
+  
+  .container {
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 2rem;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .family-tree {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  #navBar {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    background-color: #f8f8f8;
+    border-radius: 4px;
+  }
+  
+  #navBar li {
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+  }
+  
+  #navBar li:hover {
+    background-color: #e0e0e0;
+  }
+  
+  .gorilla-table {
+    margin-top: 1rem;
+  }
+  
+  #gorillaTable {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  #gorillaTable th, #gorillaTable td {
+    padding: 0.5rem;
+    border: 1px solid #ddd;
+    text-align: left;
+  }
+  
+  #gorillaTable th {
+    background-color: #f8f8f8;
+  }
+  
+  .details-container {
+    margin-top: 1rem;
+    padding: 1rem;
+    background-color: white;
+    border-radius: 4px;
+  }
+  
+  .details-container h2 {
+    margin-top: 0
+  }
+  
+  tr.hovered {
+    background-color: #f0f0f0;
+    cursor: pointer;
+  }
+
+  
+  /* Add this style to limit the image size */
+  .image-container {
+    max-width: 100%; /* Limit the width to the container's width */
+    max-height: 500px; /* Adjust this value as needed */
+    margin: 0 auto; /* Center the image horizontally */
+    overflow: auto; /* Hide any overflowing content */
+  }
+  
+  #gorillaImage {
+    display: block;
+    width: 100%; /* Set the image width to fill the container */
+    height: auto;  /* Maintain aspect ratio */
+    object-fit: cover; /* Fit the image within the container */
+}
+
+/* Style the bullet points */
+#gorillaDetails {
+    list-style: none; /* Remove default bullets */
+    padding-left: 0; /* Remove left padding for the list */
+  }
+  
+  #gorillaDetails li {
+    position: relative;
+    padding-left: 1.5rem; /* Add some space for the custom bullet */
+    margin-bottom: 0.5rem;
+  }
+  
+  #gorillaDetails li:before {
+    content: "\2022"; /* Unicode character for bullet (•) */
+    position: absolute;
+    left: 0;
+    color: #007bff; /* Customize bullet color */
+  }
+
+/* Styles for the gallery */
+.gallery-section {
+    display: flex;
+    overflow-x: auto; /* Enable horizontal scrolling */
+    margin-top: 5rem;
+    margin-bottom: 5rem;
+  }
+  
+  .gallery-image {
+    max-width: 250px; /* Adjust as needed */
+    height: 2;
+    margin-right: 10px;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out; /* Add smooth transition effect */
+  }
+  
+  .gallery-image.zoomed {
+    transform: scale(2); /* Enlarge the image on zoom */
+    z-index: 1; /* Ensure it's on top of other elements */
+  }
+
+  .map-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2rem;
+    height: 400px; /* Set a fixed height to center vertically */
+  }

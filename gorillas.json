@@ -1,0 +1,99 @@
+{
+    "momoFamily": [
+      {
+        "ID": "0079",
+        "Name": "Genki",
+        "Gender": "Female",
+        "Birthdate": "1986-06-24",
+        "Location": "Kyoto",
+        "Father": "Makk",
+        "Mother": "Hiromi",
+        "ImageUrl": "https://i.pinimg.com/736x/d3/18/20/d318201fb5c8b7aee7efc855e1fff01e.jpg",
+        "Gallery": [
+            "https://i.ytimg.com/vi/qoygtJASsqo/maxresdefault.jpg",
+            "https://i.redd.it/2mgyw3c1mj961.jpg"
+        ]
+        ,
+        "Bio": {
+          "Feature": "This is an individual in the third generation of Kyoto City Zoo. She has a distinctive plumpish body.",
+          "Character": "The individual was especially innocent in its childhood. There were times when, going somewhere, she would hide behind her mother. She used to be sensitive but is recently becoming sociable. She likes fruits.",
+          "LifeHistory": [
+            "1986.06.24 Genki was born at Kyoto City Zoo. Her father is Makk {0038}, and her mother is Hiromi {0058}.",
+            "1997.03.19 Genki moved to Ueno Zoological Gardens. (BW106.5kg)",
+            "1999.11.29 Genki moved to Kyoto City Zoo. (BW68kg)",
+            "2011.12.21 Genki gave birth to Gentaro {0096} whose father was Momotaro {0091}.",
+            "2018.12.19 Genki gave birth to Kintaro {0103} whose father was Momotaro {0091}."
+          ]
+        }
+      },
+      {
+        "ID": "0091",
+        "Name": "Momotaro",
+        "Gender": "Male",
+        "Birthdate": "2000-07-03",
+        "Location": "Kyoto",
+        "Father": "Biju",
+        "Mother": "Momoko",
+        "ImageUrl":"https://pbs.twimg.com/media/Dm4WjGOUUAACPUt.jpg:large",
+        "Gallery": [
+           "https://pbs.twimg.com/media/E3sEnOfWUAc7-uw.jpg" ,
+           "https://i.pinimg.com/originals/71/06/15/71061590e8f78f5501af7a91f3ac10a1.png",
+           "https://pds.exblog.jp/pds/1/201710/11/39/e0363539_20575501.jpg"
+        ],
+        "Bio": {
+          "Feature": "The individual sometimes plays alone. He seems to always move his body. When a human moves in front of him, he chases the human and runs around the entire stockyard. He sometimes climbs up a tree, makes a loud noise by hitting his hand to a wall, and runs around while tumbling. As he started to throw something to our visitors, we do not currently give branches to him for injury prevention.",
+          "Character": "",
+          "LifeHistory": [
+            "Momotarou was born on 2000.07.03 at Ueno Zoological Gardens. He is brought up by mother Momoko.",
+            "Momotarou moved to Chiba Zoological Park with Momoko, 2002.07.08.",
+            "Momotarou moved to Ueno Zoological Gardens with Momoko, 2008.12.02 .",
+            " Momotarou moved to Kyoto City Zoo. 2010.10.18",
+            "Gentaro  was born on 2011.12.21. Whose mother was Genki .",
+            "Kintaro was born 2018.12.19. Whose mother was Genki ."
+          ]
+        }
+      },
+      {
+        "ID": "0096",
+        "Name": "Gentaro",
+        "Gender": "Male",
+        "Birthdate": "2011-12-21",
+        "Location": "Kyoto",
+        "Father": "Momotaro",
+        "Mother": "Genki",
+        "ImageUrl": "https://pbs.twimg.com/media/EuC8B3MXUAUNXGa.jpg:large",
+        "Gallery": [  "https://shigen.nig.ac.jp/gain/image_data/gori/indi/0096/20120625183625_0_20120623WP077.jpg", 
+        "https://shigen.nig.ac.jp/gain/image_data/gori/indi/0096/20140910184446_1_IMG_2226.jpg", 
+        "https://pbs.twimg.com/media/E1MW7KYXIAItCV9?format=jpg&name=large",
+        "https://pbs.twimg.com/media/FHEfdjXWYAkX2kp.jpg:large" ], 
+        "Bio": {
+          "Feature": "",
+          "Character": "",
+          "LifeHistory": [
+            "He was born at Kyoto City Zoo on 2011.12.21  0:12AM"
+          ]
+        }
+      },
+      {
+        "ID": "0103",
+        "Name": "Kintaro",
+        "Gender": "Male",
+        "Birthdate": "2018-12-19",
+        "Location": "Kyoto",
+        "Father": "Momotaro",
+        "Mother": "Genki",
+        "ImageUrl": "https://bzmaestroeats.files.wordpress.com/2021/10/kintaro.jpg",
+        "Gallery": [ "https://pbs.twimg.com/media/FKmjMQ4XMAAxY2X.jpg:large", 
+        "https://i.pinimg.com/1200x/3f/9b/d9/3f9bd9001a425f24f95fa97b2a196211.jpg",
+        "https://i.ytimg.com/vi/Z2DnBFtqbto/maxresdefault.jpg",
+        "https://i.pinimg.com/736x/ec/10/2a/ec102ac948632962afcdeeab120bbbef.jpg", 
+        "https://yt3.googleusercontent.com/MG-pAdNp8brlUGFp0LVI8PV5oGQ20BYk2EdNHeoJ81KS5wPM_io9fF1xxqQGiKbDgBGrWW_h=s900-c-k-c0x00ffffff-no-rj"
+         ],
+        "Bio": {
+          "Feature": "",
+          "Character": "",
+          "LifeHistory": []
+        }
+      }
+    ]
+  }
