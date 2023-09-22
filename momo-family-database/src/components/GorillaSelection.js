@@ -4,17 +4,17 @@ import { Link } from 'react-router-dom';
 function GorillaSelection() {
   // Placeholder gorillas for now
   const gorillas = [
-    { id: 1, name: 'Gorilla 1' },
-    { id: 2, name: 'Gorilla 2' },
-    { id: 3, name: 'Gorilla 3' },
-    { id: 4, name: 'Gorilla 4' },
+    { ID: '0079', Name: 'Genki' },
+    { ID: '0091', Name: 'Momotaro' },
+    { ID: '0096', Name: 'Gentaro' },
+    { ID: '0103', Name: 'Kintaro' },
   ];
 
   return (
     <div>
       {gorillas.map((gorilla) => (
-        <Link key={gorilla.id} to={`/gorilla/${gorilla.id}`}>
-          <div>{gorilla.name}</div>
+        <Link key={gorilla.ID} to={`/momofamily/${gorilla.ID}`}>
+          <div>{gorilla.Name}</div>
         </Link>
       ))}
       <Link to="/">

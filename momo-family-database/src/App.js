@@ -12,7 +12,7 @@ function App() {
         <Routes>
           <Route path="/" element={<LandingPage />} />
           <Route path="/gorillas" element={<GorillaSelection />} />
-          <Route path="/gorilla/:id" element={<GorillaProfile />} />
+          <Route path="/momofamily/:id" element={<GorillaProfile />} />
         </Routes>
       </div>
     </Router>
