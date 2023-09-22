@@ -1,7 +1,7 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import { TransitionGroup, CSSTransition } from 'react-transition-group';
-import 'bootstrap/dist/css/bootstrap.min.css'; // Import Bootstrap CSS
+import './css/App.css'; // Create this CSS file for transition styles
 import LandingPage from './components/LandingPage';
 import GorillaSelection from './components/GorillaSelection';
 import GorillaProfile from './components/GorillaProfile';
