@@ -1,11 +1,12 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import '/home/rmoreira97/gorilla/momo-family-database/src/LandingPage.css';
+import './LandingPage.css'; // Correct relative path
+import landingPageImage from '../assets/images/landingpage.jpg'; // Correct relative path
 
 function LandingPage() {
   return (
     <div className="landing-container">
-      <img src="./Assets/images/landingpage.jpg" alt="Gorilla Family" />
+      <img src={landingPageImage} alt="Gorilla Family" />
       <Link to="/gorillas">
         <button>Enter</button>
       </Link>
