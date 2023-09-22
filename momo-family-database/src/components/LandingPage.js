@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import './LandingPage.css'; // Correct relative path
-import landingPageImage from '../assets/images/landingpage.jpg'; // Correct relative path
+import '../LandingPage.css'; // Correct relative path
+import landingPageImage from '../Assets/images/landingpage.jpg'; // Correct relative path
 
 function LandingPage() {
   return (
