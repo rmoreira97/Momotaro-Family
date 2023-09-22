@@ -1,0 +1,61 @@
+/* styles.css */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f0f0f0;
+}
+
+.container {
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Add this style to limit the image size */
+.image-container {
+  max-width: 100%; /* Limit the width to the container's width */
+  max-height: 500px; /* Adjust this value as needed */
+  margin: 0 auto; /* Center the image horizontally */
+  overflow: auto; /* Hide any overflowing content */
+}
+
+#gorillaImage {
+  display: block;
+  width: 100%; /* Set the image width to fill the container */
+  height: auto;  /* Maintain aspect ratio */
+  object-fit: cover; /* Fit the image within the container */
+}
+
+/* Styles for the gallery */
+.gallery-section {
+  display: flex;
+  overflow-x: auto; /* Enable horizontal scrolling */
+  margin-top: 5rem;
+  margin-bottom: 5rem;
+}
+
+.gallery-image {
+  max-width: 250px; /* Adjust as needed */
+  margin-right: 10px;
+  cursor: pointer;
+  transition: transform 0.3s ease-in-out; /* Add smooth transition effect */
+}
+
+.gallery-image.zoomed {
+  transform: scale(2); /* Enlarge the image on zoom */
+  z-index: 1; /* Ensure it's on top of other elements */
+}
+
+.fade-enter, .fade-exit {
+  opacity: 0;
+  transition: opacity 0.5s;
+}
+
+.fade-enter-active, .fade-exit-active {
+  opacity: 1;
+  transition: opacity 3s;
+}

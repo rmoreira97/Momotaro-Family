@@ -4,7 +4,8 @@ import MomotaroImage from '../Assets/images/GorillaSelection/Momotaro.png';
 import GenkiImage from '../Assets/images/GorillaSelection/Genki.png';
 import GentaroImage from '../Assets/images/GorillaSelection/Gentaro.png';
 import KintaroImage from '../Assets/images/GorillaSelection/Kintaro.png';
-import '../GorillaSelection.css';
+import '../css/GorillaSelection.css';
+
 
 function GorillaSelection() {
   const gorillas = [
