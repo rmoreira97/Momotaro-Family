@@ -1,7 +1,7 @@
 {
     "momoFamily": [
       {
-        "ID": "0079",
+        "ID": 1,
         "Name": "Genki",
         "Gender": "Female",
         "Birthdate": "1986-06-24",
@@ -27,7 +27,7 @@
         }
       },
       {
-        "ID": "0091",
+        "ID": 2,
         "Name": "Momotaro",
         "Gender": "Male",
         "Birthdate": "2000-07-03",
@@ -54,7 +54,7 @@
         }
       },
       {
-        "ID": "0096",
+        "ID": 3,
         "Name": "Gentaro",
         "Gender": "Male",
         "Birthdate": "2011-12-21",
@@ -75,7 +75,7 @@
         }
       },
       {
-        "ID": "0103",
+        "ID": 4,
         "Name": "Kintaro",
         "Gender": "Male",
         "Birthdate": "2018-12-19",
