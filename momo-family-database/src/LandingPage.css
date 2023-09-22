@@ -1,0 +1,41 @@
+/* Full-screen layout */
+body, html {
+    height: 100%;
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+/* Center content in the middle of the screen */
+.landing-container {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #f0f0f0; /* Light gray background */
+}
+
+/* Gorilla family image styling */
+.landing-container img {
+    max-width: 80%; /* Adjust as needed */
+    height: auto;
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    margin-bottom: 2rem; /* Space between image and button */
+}
+
+/* Enter button styling */
+.landing-container button {
+    padding: 0.5rem 1.5rem;
+    font-size: 1.2rem;
+    background-color: #007bff; /* Blue color */
+    color: #ffffff; /* White text */
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease; /* Smooth transition effect */
+}
+
+.landing-container button:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+}
