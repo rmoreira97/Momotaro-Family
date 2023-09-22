@@ -50,12 +50,36 @@ body {
   z-index: 1; /* Ensure it's on top of other elements */
 }
 
-.fade-enter, .fade-exit {
+.fade-enter {
   opacity: 0;
-  transition: opacity 0.5s;
+  transform: translateY(20px);
 }
 
-.fade-enter-active, .fade-exit-active {
+.fade-enter-active {
   opacity: 1;
-  transition: opacity 3s;
+  transform: translateY(0);
+  transition: opacity 300ms, transform 300ms;
+}
+
+.fade-exit {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.fade-exit-active {
+  opacity: 0;
+  transform: translateY(-20px);
+  transition: opacity 300ms, transform 300ms;
+}
+
+
+/* CSS */
+.transitioning-element {
+  position: absolute; /* or fixed */
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out; /* Adjust the duration and easing as needed */
+}
+
+.transitioning-element.active {
+  opacity: 1;
 }
