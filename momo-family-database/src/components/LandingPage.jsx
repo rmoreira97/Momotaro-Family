@@ -1,32 +1,39 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
-import 'bootstrap/dist/css/bootstrap.min.css'; // Import Bootstrap CSS
-import '../css/LandingPage.css'; // Your custom styles
-import landingPageImage from '../Assets/images/landingpage.jpg'; // Import the landing page image
+import { Canvas, useLoader } from '@react-three/fiber';
+import { OrbitControls, Text } from '@react-three/drei';
+import * as THREE from 'three';
+import familyImage from '/home/rmoreira97/gorilla/momo-family-database/src/Assets/images/family.png';
+import '/home/rmoreira97/gorilla/momo-family-database/src/css/LandingPage.css';
+
+function Scene() {
+  // Load the family texture
+  const familyTexture = useLoader(THREE.TextureLoader, familyImage);
+
+
+  return (
+    <>
+      <ambientLight intensity={0.2} />
+      <sprite position={[-1, 0, 0]} scale={[1, 1, 1]}>
+        <spriteMaterial attach="material" map={familyTexture} />
+      </sprite>
+      <Text position={[-1, 0.5, 0]} fontSize={0.2} color="white">
+        The Momotaro Family
+      </Text>
+      <Text position={[-0.5, -0.5, 0]} fontSize={0.1} color="white">
+        Explore Now
+      </Text>
+      {/* Add other 3D objects here */}
+    </>
+  );
+}
 
 function LandingPage() {
   return (
-    <div className="landing-container text-center py-5">
-      <div className="container">
-        <div className="row align-items-center">
-          <div className="col-md-6">
-            <h1 className="display-4">The Momotaro Family</h1>
-            <img
-              src={landingPageImage}
-              alt="Gorilla Family"
-              className="img-fluid"
-            />
-          </div>
-          <div className="col-md-6">
-            <p className="lead">
-              Explore everything there is to know about the amazing gorilla family and learn about these magnificent beings.
-            </p>
-            <Link to="/gorillas" className="btn btn-primary btn-lg mt-3">
-              Explore Now
-            </Link>
-          </div>
-        </div>
-      </div>
+    <div className="landing-container">
+      <Canvas camera={{ position: [0, 0, 2] }}>
+        <OrbitControls />
+        <Scene />
+      </Canvas>
     </div>
   );
 }
