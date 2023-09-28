@@ -1,43 +1,61 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import 'bootstrap/dist/css/bootstrap.min.css'; // Import Bootstrap CSS
-import MomotaroImage from '../Assets/images/GorillaSelection/Momotaro.png';
-import GenkiImage from '../Assets/images/GorillaSelection/Genki.png';
-import GentaroImage from '../Assets/images/GorillaSelection/Gentaro.png';
-import KintaroImage from '../Assets/images/GorillaSelection/Kintaro.png';
-import '../css/GorillaSelection.css';
+import React, { Suspense } from 'react';
+import { Canvas, useLoader } from 'react-three-fiber';
+import { useNavigate } from 'react-router-dom';
+import { TextureLoader } from 'three';
+import MomotaroImage from '../../public/Assets/images/GorillaSelection/Momotaro.png'; // Updated path
+import GenkiImage from '../../public/Assets/images/GorillaSelection/Genki.png'; // Updated path
+import GentaroImage from '../../public/Assets/images/GorillaSelection/Gentaro.png'; // Updated path
+import KintaroImage from '../../public/Assets/images/GorillaSelection/Kintaro.png'; // Updated path
+import CustomBackButton from './CustomBackButton'; // Import the CustomBackButton component
 
 function GorillaSelection() {
-  const gorillas = [
-    { ID: '1', Name: 'Momotaro', Image: MomotaroImage },
-    { ID: '2', Name: 'Genki', Image: GenkiImage },
-    { ID: '3', Name: 'Gentaro', Image: GentaroImage },
-    { ID: '4', Name: 'Kintaro', Image: KintaroImage },
-  ];
+  const navigate = useNavigate();
+  const gorillaImages = [MomotaroImage, GenkiImage, GentaroImage, KintaroImage];
+
+  // Create a functional component for a 3D back button
+  function CustomBackButton({ onClick, position }) {
+    return (
+      <mesh
+        position={position}
+        onClick={onClick}
+      >
+        {/* Implement the visual representation of the back button */}
+        <boxGeometry args={[0.5, 0.2, 0.1]} />
+        <meshBasicMaterial color="blue" />
+        <textMesh position={[0, 0, 0.05]} text="BACK" fontSize={0.05} color="white" />
+      </mesh>
+    );
+  }
 
   return (
     <div className="gorilla-container text-center py-5">
-      <div className="container">
-        <h1 className="display-4 mb-4">Who do you want to get to know?</h1>
-        <div className="row d-flex">
-          {gorillas.map((gorilla) => (
-            <div key={gorilla.ID} className="col-md-3 mb-4">
-              <Link to={`/momofamily/${gorilla.ID}`} className="gorilla-item">
-                <img src={gorilla.Image} alt={gorilla.Name} className="img-fluid" />
-                <div className="gorilla-name">{gorilla.Name}</div>
-              </Link>
-            </div>
+      <Canvas camera={{ position: [0, 0, 5] }}>
+        <ambientLight intensity={0.5} />
+        <directionalLight intensity={0.8} position={[2, 2, 2]} />
+        
+        {/* Load and position 3D images */}
+        <Suspense fallback={null}>
+          {gorillaImages.map((image, index) => (
+            <GorillaImage key={index} image={image} position={[-2 + index * 2, 0, 0]} />
           ))}
-        </div>
-        <div className="row">
-          <div className="col-md-12">
-            <Link to="/" className="btn btn-primary btn-lg mt-4">
-              Back
-            </Link>
-          </div>
-        </div>
-      </div>
+          
+          {/* Render the CustomBackButton component */}
+          <CustomBackButton onClick={() => navigate('/')} position={[0, -2, -2]} />
+        </Suspense>
+      </Canvas>
     </div>
+  );
+}
+
+// Create a functional component for a 3D image
+function GorillaImage({ image, position }) {
+  const texture = useLoader(TextureLoader, image);
+
+  return (
+    <mesh position={position}>
+      <planeGeometry args={[1, 1]} />
+      <meshBasicMaterial map={texture} />
+    </mesh>
   );
 }
 
