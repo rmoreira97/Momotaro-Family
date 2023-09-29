@@ -1,13 +1,12 @@
+import React from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import LandingPage from '/home/rmoreira97/gorilla/momo-family-database/src/components/LandingPage.jsx';
-import GorillaSelection from '/home/rmoreira97/gorilla/momo-family-database/src/components/GorillaSelection.jsx';
+import AppContent from '/home/rmoreira97/gorilla/momo-family-database/src/components/AppContent.jsx'; 
 
 function App() {
   return (
     <Router>
       <Routes>
-        <Route path="/" element={<LandingPage />} />
-        <Route path="/gorillas" element={<GorillaSelection />} />
+        <Route path="/" element={<AppContent />} />
       </Routes>
     </Router>
   );

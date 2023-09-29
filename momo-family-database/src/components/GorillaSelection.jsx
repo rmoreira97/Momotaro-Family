@@ -2,16 +2,17 @@ import React, { Suspense } from 'react';
 import { Canvas, useLoader } from 'react-three-fiber';
 import { useNavigate } from 'react-router-dom';
 import { TextureLoader } from 'three';
-import MomotaroImage from '../../public/Assets/images/GorillaSelection/Momotaro.png'; // Updated path
-import GenkiImage from '../../public/Assets/images/GorillaSelection/Genki.png'; // Updated path
-import GentaroImage from '../../public/Assets/images/GorillaSelection/Gentaro.png'; // Updated path
-import KintaroImage from '../../public/Assets/images/GorillaSelection/Kintaro.png'; // Updated path
+import { Text as DreiText } from '@react-three/drei';
 import CustomBackButton from './CustomBackButton'; // Import the CustomBackButton component
 
 function GorillaSelection() {
   const navigate = useNavigate();
-  const gorillaImages = [MomotaroImage, GenkiImage, GentaroImage, KintaroImage];
-
+  const gorillaImages = [
+    '/Assets/images/GorillaSelection/Momotaro.png',
+    '/Assets/images/GorillaSelection/Genki.png',
+    '/Assets/images/GorillaSelection/Gentaro.png',
+    '/Assets/images/GorillaSelection/Kintaro.png'
+  ];
   // Create a functional component for a 3D back button
   function CustomBackButton({ onClick, position }) {
     return (
@@ -22,7 +23,9 @@ function GorillaSelection() {
         {/* Implement the visual representation of the back button */}
         <boxGeometry args={[0.5, 0.2, 0.1]} />
         <meshBasicMaterial color="blue" />
-        <textMesh position={[0, 0, 0.05]} text="BACK" fontSize={0.05} color="white" />
+        <DreiText position={[0, 0, 0.05]} fontSize={0.05} color="white">
+  BACK
+</DreiText>
       </mesh>
     );
   }
