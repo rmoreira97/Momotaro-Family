@@ -4,7 +4,7 @@ import { useNavigate } from 'react-router-dom';
 import { TextureLoader } from 'three';
 import { Text as DreiText, OrbitControls } from '@react-three/drei';
 import { useLoader } from 'react-three-fiber';
-import { CubeTextureLoader } from 'three';
+
 
 
 function AppContent() {

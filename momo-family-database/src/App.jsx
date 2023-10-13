@@ -1,6 +1,7 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import AppContent from '/home/rmoreira97/gorilla/momo-family-database/src/components/AppContent.jsx'; 
+import AppContent from './components';
+ 
 
 function App() {
   return (
